@@ -22,7 +22,7 @@ class Ejemplar(models.Model):
     localizacion = models.CharField(max_length = 30)
     libro = models.ForeignKey(Libro, on_delete = models.CASCADE)
     def __str__(self):
-        return str('Ejemplar ' + self.codigo)
+        return str('Ejemplar ' + str(self.codigo) + ' de ' + str(self.libro))
 
 class Usuario(models.Model):
     telefono = models.IntegerField()
