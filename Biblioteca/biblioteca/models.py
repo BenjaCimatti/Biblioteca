@@ -21,6 +21,7 @@ class Ejemplar(models.Model):
     codigo = models.AutoField(primary_key = True)
     localizacion = models.CharField(max_length = 30)
     libro = models.ForeignKey(Libro, on_delete = models.CASCADE)
+    
     def __str__(self):
         return str('Ejemplar ' + str(self.codigo) + ' de ' + str(self.libro))
 
